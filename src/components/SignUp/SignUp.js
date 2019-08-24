@@ -20,9 +20,15 @@ const SignUpSchema = Yup.object().shape({
 });
 
 export class SignUp extends Component {
+  componentDidMount() {
+    document.body.style.backgroundColor = "#AD97EF";
+    document.body.style.display = 'flex';
+    document.body.style.justifyContent = 'center';
+  }
+
   render() {
     return (
-      <div className="main">
+      <div>
         <p className="header">Notes</p>
         <Formik
           initialValues={{ name: "", email: "", password: "", confirmPassword: "" }}
