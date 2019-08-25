@@ -1,9 +1,10 @@
-.header {
+.signin-header {
   color: #fff;
   text-align: center;
+  font-size: 30px;
 }
 
-.card {
+.signin-card {
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
   border-radius: 3px;
   margin: 40px;
@@ -13,6 +14,13 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
+
+  p {
+    color: #000000;
+    margin-left: 15px;
+    font-size: 18px;
+    width: 60px;
+  }
 
   button {
     font-family: CircularStd;
@@ -30,16 +38,9 @@
     border-radius: 3px;
     padding: 8px 16px 8px 16px;
   }
-
-  p {
-    color: #000000;
-    margin-left: 13px;
-    font-size: 18px;
-    width: 150px;
-  }
 }
 
-.input {
+.signin-input {
   outline: none;
   font-family: CircularStd;
   font-weight: 400;
@@ -55,13 +56,13 @@
   margin-bottom: 20px;
 }
 
-.signin {
+.signup {
   color: #fff;
   font-size: 16.4px;
   text-align: center;
 }
 
-.error {
+.signin-error {
   color: rgba(208, 21, 46, 1);
   background-color: rgba(255, 105, 91, 0.16);
   padding: 8px;

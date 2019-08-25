@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const NotFound = () => {
   return (
     <div>
-      WRONG PAGE
+      WRONG PAGE<br />
       Go <Link to="/">home</Link> kiddo
     </div>
   )

@@ -1,0 +1,51 @@
+.mainOne {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 50px;
+
+  p {
+    color: #606060;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .right {
+    display: flex;
+    margin-left: 180px;
+    align-items: center;
+
+    .date {
+      color: #606060;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 21px;
+    }
+
+    .slab-card {
+      padding: 20px;
+      margin-left: 67px;
+      width: 162px;
+      background-color: #49AB52;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+
+      .total-paid {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+
+      .amount {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 27px;
+        color: #ffffff;
+      }
+    }
+  }
+}
