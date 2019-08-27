@@ -14,7 +14,7 @@ export class EditNoteContent extends Component {
           </div>
         </div>
         <div>
-          <EditNoteForm />
+          <EditNoteForm locat={this.props.loc} />
         </div>
       </div>
     );

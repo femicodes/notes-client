@@ -16,7 +16,7 @@ const Router = () => (
       <Route path="/auth/signup" component={SignUp} />
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/add" component={AddNew} />
-      <Route path="/edit" component={EditNote} />
+      <Route path="/edit/:id" component={EditNote} />
       {/* <Route path="/store/:storeId" component={App} /> */}
       <Route component={NotFound} />
     </Switch>

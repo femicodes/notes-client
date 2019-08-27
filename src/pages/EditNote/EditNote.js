@@ -7,7 +7,7 @@ export class EditNote extends Component {
     return (
       <div className="parent">
         <Navbar />
-        <EditNoteContent />
+        <EditNoteContent loc={this.props} />
       </div>
     );
   };

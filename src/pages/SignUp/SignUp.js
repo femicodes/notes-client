@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import './SignUp.scss';
+import { signup } from '../../utils/request';
 
 const SignUpSchema = Yup.object().shape({
   name: Yup.string()
@@ -20,6 +21,10 @@ const SignUpSchema = Yup.object().shape({
 });
 
 export class SignUp extends Component {
+  state = {
+    error: ''
+  }
+
   componentDidMount() {
     document.body.style.backgroundColor = "#AD97EF";
     document.body.style.display = 'flex';
@@ -34,12 +39,17 @@ export class SignUp extends Component {
           initialValues={{ name: "", email: "", password: "", confirmPassword: "" }}
           validationSchema={SignUpSchema}
           onSubmit={fields => {
-            alert('SUCCESS!! :-)\n\n' + JSON.stringify(fields, null, 4))
+            signup(fields).then(res => {
+              if (res.status === 403) return this.setState({ error: res.errors.message });
+              localStorage.setItem('user_token', res.data.token);
+              this.props.history.push('/dashboard');
+            });
           }}
         >
           {({ touched, errors, isSubmitting }) => (
             <Form className="card">
               <p>Create an account</p>
+              <div className={this.state.error ? 'error' : ''}>{this.state.error}</div>
               <Field type="text"
                 name="name"
                 placeholder="🖋️ Name"
@@ -94,9 +104,8 @@ export class SignUp extends Component {
 
               <button
                 type="submit"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? "Please wait..." : "Sign in"}
+                Sign in
               </button>
             </Form>
           )}

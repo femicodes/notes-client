@@ -38,36 +38,36 @@
     font-size: 18px;
     width: 150px;
   }
-}
 
-.input {
-  outline: none;
-  font-family: CircularStd;
-  font-weight: 400;
-  background-color: #F2F2F2;
-  color: #444444;
-  height: 38px;
-  width: 340px;
-  border: 2px solid #FFFFFF;
-  padding: 4px 0 0 20px;
-  font-size: 16px;
-  letter-spacing: 0.16px;
-  border-radius: 3px;
-  margin-bottom: 20px;
+  .input {
+    outline: none;
+    font-family: CircularStd;
+    font-weight: 400;
+    background-color: #F2F2F2;
+    color: #444444;
+    height: 38px;
+    width: 340px;
+    border: 2px solid #FFFFFF;
+    padding: 4px 0 0 20px;
+    font-size: 16px;
+    letter-spacing: 0.16px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+  }
+
+  .error {
+    color: rgba(208, 21, 46, 1);
+    background-color: rgba(255, 105, 91, 0.16);
+    padding: 8px;
+    margin: -10px 0px 10px 10px;
+    text-align: center;
+    border-radius: 2px;
+    width: 350px;
+  }
 }
 
 .signin {
   color: #fff;
   font-size: 16.4px;
   text-align: center;
-}
-
-.error {
-  color: rgba(208, 21, 46, 1);
-  background-color: rgba(255, 105, 91, 0.16);
-  padding: 8px;
-  margin: -10px 0px 10px 10px;
-  text-align: center;
-  border-radius: 2px;
-  width: 350px;
 }
