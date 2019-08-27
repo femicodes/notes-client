@@ -105,7 +105,7 @@ export class SignUp extends Component {
               <button
                 type="submit"
               >
-                Sign in
+                Sign up
               </button>
             </Form>
           )}

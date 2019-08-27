@@ -1,8 +1,22 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import '../Content/Content.scss';
 import NoteForm from '../NoteForm/NoteForm';
 
 export class NoteContent extends Component {
+  logOut = () => {
+    localStorage.removeItem('user_token');
+    this.props.history.push('/');
+  };
+
+  componentDidMount() {
+    const token = localStorage.getItem('user_token');
+
+    if (!token) {
+      this.props.history.push('/');
+    };
+  };
+
   render() {
     return (
       <div className="content">
@@ -10,7 +24,7 @@ export class NoteContent extends Component {
           <div className="items">
 
             <div className="first">
-              <button>Log out</button>
+            <button onClick={this.logOut}>Log out</button>
             </div>
           </div>
         </div>
@@ -22,4 +36,4 @@ export class NoteContent extends Component {
   };
 };
 
-export default NoteContent;
+export default withRouter(NoteContent);

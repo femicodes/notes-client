@@ -11,7 +11,7 @@ export class Content extends Component {
     notes: []
   }
 
-  logOut() {
+  logOut = () => {
     localStorage.removeItem('user_token');
     this.props.history.push('/');
   }
@@ -39,7 +39,7 @@ export class Content extends Component {
           <div className="items">
 
             <div className="first">
-              <button onClick={() => this.logOut(this)}>Log out</button>
+              <button onClick={this.logOut}>Log out</button>
             </div>
           </div>
         </div>
